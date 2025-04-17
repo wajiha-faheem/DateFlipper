@@ -1,0 +1,138 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #e0f7ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .calendar {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    width: 350px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 3px solid #ffc6ec;
+    perspective: 1000px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .header button {
+    background: linear-gradient(145deg, #d4b4f3, #9fc4f8);
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .header button:hover {
+    opacity: 0.9;
+  }
+  
+  #monthYear {
+    color: #9247ff;
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+  
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #6a1b9a;
+  }
+  
+  .dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    gap: 6px;
+  }
+  
+  .dates div {
+    padding: 10px;
+    border-radius: 10px;
+    background: #f9f0ff;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 1px solid #e0caff;
+  }
+  
+  .dates div:hover {
+    background: #f3e5ff;
+  }
+  
+  .today {
+    background: #b39ddb;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .checked {
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(102, 166, 255, 0.6);
+    border: 2px solid white;
+    animation: pop 0.2s ease-in-out;
+  }
+  
+  .crossed {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    text-decoration: line-through;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(255, 120, 150, 0.5);
+    border: 2px solid white;
+    animation: pop 0.2s ease-in-out;
+  }
+  
+  .checked-alt {
+   
+    color: #4a4a4a;
+   
+    
+    border: 2px solid white;
+    animation: pop 0.2s ease-in-out;
+  }
+  
+  @keyframes flipIn {
+    0% {
+      transform: rotateY(90deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotateY(0deg);
+      opacity: 1;
+    }
+  }
+  
+  .flipping {
+    animation: flipIn 0.6s ease-in-out reverse;
+  }
+  
+  @keyframes pop {
+    0% {
+      transform: scale(0.9);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
